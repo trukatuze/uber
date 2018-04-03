@@ -1,0 +1,16 @@
+header{
+  display: block;
+  background-color: black;
+  width: 100%;
+  position: relative;
+  .name{
+    color: white;
+    font-family: releway, Helvetica, Arial, sans-serif;
+    font-weight: 900;
+    font-size: 24px;
+  }
+  a{
+    color: white;
+    font-family: Helvetica, Arial, sans-serif;
+  }
+}
