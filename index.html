@@ -4,9 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>UBER</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,700,900" rel="stylesheet">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <!--ico-->
+    <link rel="shortcut icon" href="http://bootstrap-3.ru/assets/ico/favicon.ico">
 </head>
 <body>
 <header class="header">
@@ -23,18 +30,42 @@
             </div>
             <div class="navbar-collapse collapse" style="height: 1px;">
                 <ul class="nav navbar-nav">
+                    <!--data-toggle="tab" - перемикає кнопки навігації-->
                     <li class="active"><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#contact">Contact</a></li>
+                    <li class="dropdown">
+                        <a data-toggle="dropdown" href="#">Dropdown</a>
+                        <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li class="divider"></li>
+                            <li class="dropdown-header">Nav header</li>
+                            <li><a href="#">Separated link</a></li>
+                            <li><a href="#">One more separated link</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
         </div>
     </div>
+
 </header>
-<main>
+<main class="main">
+
     <section id="home" >
-        <div class="container">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquid at dolore dolorum ducimus ea eius enim id ipsam iusto laborum magnam maiores maxime non odio odit possimus quae quis quod quos repudiandae, sed sint sit suscipit tempora veniam veritatis vero? Cum deserunt numquam optio perspiciatis placeat possimus quam. Ad amet blanditiis consequuntur dolorem, ea error est inventore iste labore modi neque omnis repellendus rerum sapiente sequi tempora tenetur unde veniam? Accusantium ad aliquam at cupiditate, dignissimos doloribus ducimus et eum harum impedit ipsa, iusto laborum nemo omnis praesentium recusandae repellat repellendus sed tempora voluptatem? Animi pariatur quasi saepe sunt?</p>
+        <div class="container-fluid">
+            <div class="wrapper">
+            <video id="bgvid" width="100%" height="100%" autoplay loop>
+                <source src="Video2.mp4" type="video/mp4">
+            </video>
+            <div id="info-block">
+                <h1>Phasellus consectetur, nunc eget pellentesque dignissim</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris lobortis lectus neque, at faucibus neque consequat eu. Vivamus accumsan pulvinar mi nec molestie. Nam pretium nisi vitae tortor lacinia congue.</p>
+                <button>Pause</button>
+            </div>
+            </div>
         </div>
     </section>
 
@@ -46,15 +77,45 @@
 
     <section id="contact" >
         <div class="container">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquid at dolore dolorum ducimus ea eius enim id ipsam iusto laborum magnam maiores maxime non odio odit possimus quae quis quod quos repudiandae, sed sint sit suscipit tempora veniam veritatis vero? Cum deserunt numquam optio perspiciatis placeat possimus quam. Ad amet blanditiis consequuntur dolorem, ea error est inventore iste labore modi neque omnis repellendus rerum sapiente sequi tempora tenetur unde veniam? Accusantium ad aliquam at cupiditate, dignissimos doloribus ducimus et eum harum impedit ipsa, iusto laborum nemo omnis praesentium recusandae repellat repellendus sed tempora voluptatem? Animi pariatur quasi saepe sunt?</p>
+            <div class="col-md-4">
+                <form role="form">
+                    <div class="form-group">
+                        <label for="usr">Ім'я:</label>
+                        <input class="form-control input-lg" type="text" placeholder="Ім'я">
+                    </div>
+                    <div class="form-group">
+                        <label for="usr">Номер телефону:</label>
+                        <input class="form-control input-lg" type="number" placeholder="Номер телефону">
+                    </div>
+                    <div class="form-group">
+                        <label for="usr">Вік:</label>
+                        <input class="form-control input-lg" type="number" placeholder="Скільки вам років?">
+                    </div>
+                    <div class="form-group">
+                        <label for="usr">Стаж водіння авто (років):</label>
+                        <input class="form-control input-lg" type="number" placeholder="Ваш стаж водіння?">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputFile">Ваше фото (за бажанням):</label>
+                        <input type="file" id="exampleInputFile">
+                        <p class="help-block">Ваші дані захищенно, розповсюдженню третім лицям не підлягають!</p>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox"> Погоджую відправлення данних компанії
+                        </label>
+                    </div>
+                    <button type="submit" class="btn btn-default ok">Відправити</button>
+                </form>
+            </div>
         </div>
     </section>
 
 </main>
 
-
-
 <script src="js/jquery-3.2.1.min.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <script src="js/main.js"></script>
 </body>
 </html>
