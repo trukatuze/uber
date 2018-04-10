@@ -1,10 +1,17 @@
-// $(document).ready(function() {
-//     $('li').click(function () {
-//         var parent = $(this).parents('ul');
-//         parent.find('li').addClass('active');
-//         // parent.find('li').removeClass('active');
-//     })
-// });
+$(document).ready(function() {
+    $('.about').submit(function (e) {
+        e.preventDefault();
+        var data = $(this).serialize();
+        $.ajax({
+            type: "POST",
+            url:"test.php",
+            data:data,
+            success:function (about){
+                $('.about').html(about);
+            }
+        });
+    });
+});
 $('.ok').on('click', (function (e) {
     e.preventDefault();
 }));
