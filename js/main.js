@@ -1,4 +1,5 @@
 $(document).ready(function() {
+    // pause and video
 $(function(){
     var vid = document.getElementById('bgvid');
     var pause = $('#info-block #pause');
@@ -21,10 +22,20 @@ $(function(){
         }
         });
     });
-
-    $('li').click(function(){
-        $(this).css({'background-color':'black'});
-        
+         // bg black on menu
+    // $('.bg').map(function() {
+    //     $('.bg').click(function () {
+    //         $('.bg').addClass('active')
+    //
+    //     });
+    // });
+    $('.bg').click(function(){
+        $('.bg').map(function(){
+            $(this).removeClass('active');
+        });
+        $(this).addClass('active');
     })
-
+    // $('li').click(function() {
+    //     $(this).removeClass('active');
+    // });
 });
