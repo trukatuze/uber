@@ -1,5 +1,4 @@
 $(document).ready(function() {
-    $('#bgvid').attr('playsinline','');
     // pause and video
 
 $(function(){
