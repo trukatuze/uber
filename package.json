@@ -4,7 +4,8 @@
   "description": "A starter theme for Drupal",
   "main": "index.js",
   "dependencies": {
-    "bootstrap-sass": "^3.3.7"
+    "bootstrap-sass": "^3.3.7",
+    "browser-sync": "^2.24.4"
   },
   "devDependencies": {
     "grunt": "^0.4.5",
