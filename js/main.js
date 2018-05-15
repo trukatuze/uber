@@ -1,4 +1,5 @@
 $(document).ready(function() {
+
     // pause and video
 
 $(function(){
@@ -23,6 +24,7 @@ $(function(){
         }
         });
     });
+
          // bg black on menu
 
     $('.bg').click(function(){
